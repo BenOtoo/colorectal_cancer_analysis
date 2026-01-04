@@ -1,0 +1,35 @@
+html{
+    background-color: gray;
+}
+h1,
+h2,
+h3{
+    color: white;
+}
+p{
+    color: white;
+    width: 70%;
+    text-align: justify;
+    font-size: 120%;
+}
+
+.container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    margin-top: 5%;
+}
+li{
+    font-size: 120%;
+    color: white;
+    width: 60%;
+    text-align: justify;
+}
+img{
+    width: 70%;
+    flex-grow: 2;
+}

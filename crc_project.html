@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EDA Colorectal Cancer</title>
+        <link rel="stylesheet" href="crc_project.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Exploratory Data Analysis of Colorectal Cancer Data</h1>
+            <p>This notebook presents an exploratory data analysis (EDA) of a colorectal cancer dataset.
+            The objective is to examine demographic and clinical patterns in age
+            distributions, Dukes cancer stages, and survival after treatment of colorectal cancer
+            </p>
+            <h2>
+                Dataset Description
+            </h2>
+            <p>
+                The dataset used in this analysis was obtained from Kaggle and contains de-identified
+                clinical records of colorectal cancer patients. Each row represents an individual
+                patient, with demographic information, disease staging, treatment indicators,
+                and disease-free survival outcomes.
+            </p>
+            <h2>Variables</h2> 
+            <ul>
+                <li><em>ID_REF:</em> Unique patient/sample identifier</li>
+                <li><em>Age (in years):</em> Patient age at diagnosis  </li>
+                <li><em>Dukes Stage:</em> Clinical staging of colorectal cancer (A–D)  </li>
+                <li><em>Gender:</em> Patient gender </li>
+                <li><em>Location:</em> Tumor location (e.g., left-sided) </li>
+                <li><em>DFS (in months):</em> Disease-free survival time measured in months</li>
+                <li><em>DFS event:</em> Indicator of disease recurrence or event (1 = event occurred, 0 = censored) </li>
+                <li><em>Adj_Radio:</em> Indicator for adjuvant radiotherapy (1 = yes, 0 = no) </li>
+                <li><em>Adj_Chem:</em> Indicator for adjuvant chemotherapy (1 = yes, 0 = no) </li>
+            </ul>
+            <p>
+                The dataset is publicly available and anonymized, making it suitable for
+                educational and exploratory data analysis purposes.
+            </p>
+            <h2>Libraries and Environment Setup</h2>
+            <p>This section imports the Python libraries required for data manipulation, analysis, and visualization.</p>
+            <img src="image_1_dummie.png" alt="">
+            <h2>Data Loading and Cleaning</h2>
+            <p>The colorectal cancer dataset is loaded into a Pandas DataFrame for analysis.</p>
+            <img src="image_2.png" alt="">
+            <img src="image_3.png" alt="">
+            <img src="image_4.png" alt="">
+            <h2>Initial Data Exploration</h2>
+            <p>Initial exploration is performed to understand the structure, variables, and basic characteristics of the dataset.</p>
+            <img src="image_5.png" alt="">
+            <h2>Exploratory Analysis: Age Distribution</h2>
+            <img src="image_6.png" alt="">
+            <img src="image_7.png" alt="">
+            <h2>Exploratory Analysis: Dukes Stage</h2>
+            <p>Count plots are used to compare distributions of Dukes stages (A–D).</p>
+            <img src="image_8.png" alt="">
+            <h2>Age Distribution by Dukes Stage</h2>
+            <p>Boxplots and overlapping histograms are used to compare age distributions across Dukes stages (A–D). Density normalization enables meaningful comparison between groups of different sizes.</p>
+            <img src="image_9.png" alt="">
+            <img src="image_10.png" alt="">
+            <img src="image_11.png" alt="">
+            <h2>Exploratory Analysis: Demographic Stratification</h2>
+            <h3>Age by Gender and location of tumor</h3>
+            <p>Grouped aggregations are used to compare mean age across gender andn location categories.</p>
+            <img src="image_12.png" alt="">
+            <h3>Distribution by Gender and Location of tumor</h3>
+            <img src="image_13.png" alt="">
+            <h3>Exploratory Analysis of Survival Duration of Patients</h3>
+            <img src="" alt="">
+            <h2>Survival analysis based on treatment options</h2>
+            <p>Boxplots show survival length of patients based on treatment types: chemotherapy and radiotherapy with 0.0 representing chemotherapy and 1.0 representing radiotherapy</p>
+            <img src="image_14.png" alt="">
+            <img src="image_15.png" alt="">
+            <h2>Survival analysis based on age</h2>
+            <p>Scatter plot showing correlation between age and survival duration after treatment.</p>
+            <img src="image_16.png" alt="">
+            <img src="image_17.png" alt="">
+            <h2>Key Observations</h2>
+            <ol>
+                <li>B stage cancer fell below the median for the experimental dataset. B stage cancer may be associated with the age of the dataset</li>
+                <li>Data shows overlapping data values of both treatment types (chemotherapy and radiotherapy). The similarity of boxplots for both data set shows there is generally no corelation between treatment type and survival.</li>
+                <li>There is weak negative correlation between age and survival after treatment</li>
+                <li>The data shows that relatively older females (65yrs) frequently have tumors located in their rectum</li>
+                <li>There was no female having colon cancer type for this dataset</li>
+                <li>The above indicates that higher proportion of men usually have cancer in all locations compared to females</li>
+            </ol>
+            <h2>Limitations</h2>
+            <p>This exploratory analysis is subject to limitations related to sample size, variable availability, and lack of outcome data.</p>
+            <h2>Reproducibility</h2>
+            <p>All analysis was conducted in a Jupyter Notebook using Python and is designed to be reproducible and extensible.</p>
+        </div>
+    </body>
+    <footer>
+
+    </footer>
+</html>
